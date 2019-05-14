@@ -6,7 +6,7 @@ export default function index() {
   return (
     <Layout>
       <h1>Hi im alive</h1>
-      <Link to="/about">To About &rarr;</Link>
+      <Link to="/about/">To About &rarr;</Link>
     </Layout>
   );
 }
