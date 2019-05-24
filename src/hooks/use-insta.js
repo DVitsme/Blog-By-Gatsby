@@ -11,7 +11,7 @@ const UseInsta = () => {
           localFile {
             childImageSharp {
               fluid(maxWidth: 120, maxHeight: 120) {
-                ...GatsbyImageSharpFluid_widthWebp
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -20,7 +20,7 @@ const UseInsta = () => {
     }
   `);
 
-  return data.allInstaNode.data.map(node => ({
+  return data.allInstaNode.nodes.map(node => ({
     ...node.localFile.childImageSharp,
     id: node.id,
     caption: node.caption,
